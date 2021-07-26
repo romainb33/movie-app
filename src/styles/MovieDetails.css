@@ -3,11 +3,6 @@
   padding: 100px 60px 0;
 }
 
-h4 {
-  font-weight: 500;
-  color: #0AC870;
-}
-
 .details {
   display: flex;
 }
@@ -21,8 +16,22 @@ h4 {
 .movie-image {
   min-width: 80px;
   max-width: 250px;
-  margin-right: 35px
+  margin-right: 35px;
+  border-radius: 10px;
 }
 .movie-desc h4 {
   margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.movie-rating {
+  font-size: 20px;
+}
+
+.loading-message {
+  font-size: 70px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #dafced;
+  letter-spacing: 10px;
 }
