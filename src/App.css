@@ -1,3 +1,19 @@
 .App {
-  text-align: center;
+  display: flex;
 }
+
+.searchSection {
+  display: flex;
+  flex-direction: column;
+  padding: 60px 40px;
+  width: 30%;
+  height: 100vh;
+  border-right: 1px solid darkgray;
+}
+
+.searchSection > h1 {
+  margin-bottom: 30px;
+  line-height: 30px;
+}
+
+

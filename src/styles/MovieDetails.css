@@ -1,0 +1,28 @@
+.MovieDetails {
+  width: 70%;
+  padding: 100px 60px 0;
+}
+
+h4 {
+  font-weight: 500;
+  color: #0AC870;
+}
+
+.details {
+  display: flex;
+}
+
+.movie-title {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.movie-image {
+  min-width: 80px;
+  max-width: 250px;
+  margin-right: 35px
+}
+.movie-desc h4 {
+  margin-bottom: 30px;
+}

@@ -7,7 +7,7 @@ Fleet Movie App is a SPA created with React, it allows users to find a specific 
 
 1. Create & open a `.env` file in "./src".
 
-2. Add a `TMDB_API_KEY with` your TMBD key then save.
+2. Add a `TMDB_API_KEY` with your TMBD key then save.
 
 3. Launch `npm install` in the terminal.
 
