@@ -11,7 +11,7 @@ const SearchBar = ({
   SetMoviesSearched,
   setMovieSelected,
 }) => {
-    
+  console.log(moviesSearched);  
   const handleSelectedMovie = (movie) => {
     setMovieSelected(movie);
     setSearch("");

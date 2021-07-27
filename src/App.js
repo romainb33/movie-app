@@ -3,22 +3,28 @@ import React, { useState, useEffect } from "react";
 import SearchBar from "./Components/SearchBar";
 import MovieDetails from "./Components/MovieDetails";
 import "./App.css";
-import moviesData from "./data/movies.json";
+//import moviesData from "./data/movies.json";
+
+//Call
+import { getMoviesFromSearch } from "./api/TMDBapi";
 
 
 const App = () => {
   const [search, setSearch] = useState("");
   const [moviesSearched, SetMoviesSearched] = useState([]);
   const [movieSelected, setMovieSelected] = useState(null);
-
-  const movies = moviesData.results
+  
+  //const movies = moviesData.results
 
 
   useEffect(() => {
     if (search.length >= 2) {
-      SetMoviesSearched(
-        movies.filter((movie) => movie.title.match(new RegExp(search, "i")))
-      );
+      getMoviesFromSearch(search)
+        .then(movies => SetMoviesSearched(movies.results.slice(0,7)))
+        .catch(err => console.error(err));
+      // SetMoviesSearched(
+      //   movies.filter((movie) => movie.title.match(new RegExp(search, "i")))
+      // );
     } else {
       SetMoviesSearched([]);
     }

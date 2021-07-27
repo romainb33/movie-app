@@ -3,17 +3,18 @@ import '../styles/MovieDetails.css'
 
 const MovieDetails = ({movie}) => {
 
+  // Change color based on the ratings
   const ratingColorsStyle = (rating) => {
     if (!rating || typeof rating !== "number") return;
-    
+
     if (rating >= 7) {
-      return "green"
-    } else if (rating >= 4.5 &&  rating < 7) {
-      return "yellow"
+      return "green";
+    } else if (rating >= 4.5 && rating < 7) {
+      return "yellow";
     } else {
-      return "red"
+      return "red";
     }
-  }
+  };
 
   if (!movie) {
     return (
@@ -33,8 +34,8 @@ const MovieDetails = ({movie}) => {
       <h2 className="movie-title">{movie.title}</h2>
       <div className="details">
         <img
-          className="movie-image"
-          src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
+          className={`movie-image ${!movie.poster_path && "no_image"}`}
+          src={movie.poster_path ?`https://image.tmdb.org/t/p/original/${movie.poster_path}` : `/no_poster.svg`}
           alt="film"
         />
         <div className="movie-desc">

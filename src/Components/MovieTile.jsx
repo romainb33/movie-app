@@ -2,6 +2,7 @@ import React from "react";
 
 const MovieTile = ({movie, handleSelectedMovie}) => {
 
+  // Display only the released year
   const yearFromDate = (releasedDate) => {
     if (!releasedDate) return;
     return releasedDate.split("-")[0]
