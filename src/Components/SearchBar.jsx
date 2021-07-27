@@ -11,12 +11,13 @@ const SearchBar = ({
   SetMoviesSearched,
   setMovieSelected,
 }) => {
-  console.log(moviesSearched);  
+  // When clicked, display MovieDetails Component and reset the search
   const handleSelectedMovie = (movie) => {
     setMovieSelected(movie);
     setSearch("");
     SetMoviesSearched([]);
   };
+
   return (
     <>
       <input
@@ -28,7 +29,9 @@ const SearchBar = ({
       />
 
       <ul className="dropdown-list">
-        {moviesSearched.length === 0 && search.length >= 2 && <li>Sorry no movies found</li>}
+        {moviesSearched.length === 0 && search.length >= 2 && (
+          <li>Sorry no movies found</li>
+        )}
 
         {moviesSearched &&
           moviesSearched.map((movie) => (

@@ -5,7 +5,7 @@ import MovieDetails from "./Components/MovieDetails";
 import "./App.css";
 //import moviesData from "./data/movies.json";
 
-//Call
+// API CALL
 import { getMoviesFromSearch } from "./api/TMDBapi";
 
 
@@ -22,6 +22,7 @@ const App = () => {
       getMoviesFromSearch(search)
         .then(movies => SetMoviesSearched(movies.results.slice(0,7)))
         .catch(err => console.error(err));
+      // STEP 2 filtering  
       // SetMoviesSearched(
       //   movies.filter((movie) => movie.title.match(new RegExp(search, "i")))
       // );

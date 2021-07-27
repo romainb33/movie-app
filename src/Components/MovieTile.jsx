@@ -1,17 +1,19 @@
 import React from "react";
 
-const MovieTile = ({movie, handleSelectedMovie}) => {
-
+const MovieTile = ({ movie, handleSelectedMovie }) => {
+  
   // Display only the released year
   const yearFromDate = (releasedDate) => {
     if (!releasedDate) return;
-    return releasedDate.split("-")[0]
-  }
+    return releasedDate.split("-")[0];
+  };
 
   return (
     <li className="filmTile" onClick={() => handleSelectedMovie(movie)}>
       <p>
-        {movie.title.length < 36 ? movie.title : movie.title.slice(0,34) + "..."}
+        {movie.title.length < 36
+          ? movie.title
+          : movie.title.slice(0, 34) + "..."}
         <span className="green">
           {" "}
           | {yearFromDate(movie.release_date) || "N/A"}
