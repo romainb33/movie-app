@@ -3,8 +3,9 @@ import React, { useState, useEffect } from "react";
 import SearchBar from "./Components/SearchBar";
 import MovieDetails from "./Components/MovieDetails";
 import "./App.css";
-//import moviesData from "./data/movies.json";
 
+
+//import moviesData from "./data/movies.json";
 // API CALL
 import { getMoviesFromSearch } from "./api/TMDBapi";
 
@@ -15,7 +16,6 @@ const App = () => {
   const [movieSelected, setMovieSelected] = useState(null);
   
   //const movies = moviesData.results
-
 
   useEffect(() => {
     if (search.length >= 2) {
@@ -29,7 +29,7 @@ const App = () => {
     } else {
       SetMoviesSearched([]);
     }
-    
+
   }, [search]);
 
   return (
