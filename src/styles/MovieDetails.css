@@ -1,6 +1,6 @@
 .MovieDetails {
   width: 70%;
-  padding: 100px 60px 0;
+  padding: 100px 60px;
 }
 
 .details {
@@ -19,7 +19,6 @@
   margin-right: 35px;
   border-radius: 10px;
   box-shadow: 0px 4px 18px #c7c7c7;
-  
 }
 .no_image {
   background-color: #e6e6e6;

@@ -36,7 +36,7 @@ const MovieDetails = ({movie}) => {
         <img
           className={`movie-image ${!movie.poster_path && "no_image"}`}
           src={movie.poster_path ?`https://image.tmdb.org/t/p/original/${movie.poster_path}` : `/no_poster.svg`}
-          alt="film"
+          alt={movie.poster_path ? `${movie.title} poster` : 'No poster found'}
         />
         <div className="movie-desc">
           <h4>

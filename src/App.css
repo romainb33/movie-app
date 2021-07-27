@@ -7,7 +7,7 @@
   flex-direction: column;
   padding: 60px 40px;
   width: 30%;
-  height: 100vh;
+  min-height: 100vh;
   border-right: 1px solid darkgray;
 }
 
@@ -15,7 +15,6 @@
   margin-bottom: 30px;
   line-height: 30px;
 }
-
 
 .green {
   color: #0AC870;
