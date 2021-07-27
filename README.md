@@ -1,6 +1,6 @@
 # Fleet Movie App
 
-Fleet Movie App is a SPA created with React, it allows users to find a specific movies and display details on it.
+Fleet Movie App is a SPA created with React, it allows users to find a specific movie and display details on it.
 
 
 ## Run the app
